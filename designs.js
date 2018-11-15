@@ -13,29 +13,12 @@ function changeColor(evt){
 function gridListener(evt){
 //prevent form default action when submitted
   evt.preventDefault()
-
-
-  //form.addEventListener('submit', gridListener);
-//check to see if grid already exists
+  //check to see if grid already exists
   if (tbl.tBodies.length === 1) {
     //get table cell
     let cell = document.querySelectorAll('td')
-
-    //returns a nodeList of all td elements
-    //var cell = document.querySelectorAll('td')
-    //loop through all table cells and reset backgroundColor
-    //for ( let x = 0; x < document.getElementsByTagName('td').length; x++){
-      //document.getElementsByTagName('td')[x].style.backgroundColor = //'transparent'
-
-
-    //}
     //remove the grid
       tbl.innerHTML = '';
-    //for (let x = 0; x < cell.length; x++){
-      //cell[x].style.backgroundColor = 'transparent'
-
-    //}
-
   } else {
     //if grid doesn't exist create it
     //get grid Height
@@ -48,7 +31,6 @@ function gridListener(evt){
           //loop over gridHeight to insert cells in rows
         for ( let column_index = 0; column_index < gridHeight; column_index++) {
            var column = row.insertCell(column_index);
-
         }
     }
     //get table cell
@@ -64,9 +46,7 @@ function gridListener(evt){
 
 
 function makeGrid(){
-
   form.addEventListener('submit', gridListener);
-
 }
 
 makeGrid();
